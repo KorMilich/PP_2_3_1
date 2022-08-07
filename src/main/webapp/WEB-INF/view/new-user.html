@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New User</title>
+</head>
+
+<body style="background-color: aqua">
+<div align="center">
+    <h2 style="background-color: lawngreen">Создай свою личность</h2>
+
+
+    <form  style="background-color: aqua" th:method="POST" th:action="@{/users}" th:object="${user}">
+        <label for="name" style="background-color: aqua">Как тебя зовут: </label>
+        <input type="text" style="background-color: burlywood" th:field="*{name}" id="name"/>
+        <br/>
+
+        <label for="lastName" style="background-color: aqua">Шлепни фамилию: </label>
+        <input type="text" style="background-color: burlywood" th:field="*{lastName}" id="lastName"/>
+        <br/>
+
+        <label for="age" style="background-color: aqua" >Тебе всегда 18 лет: </label>
+        <input type="text" style="background-color: burlywood" th:field="*{age}" id="age"/>
+        <br/>
+
+        <input type="submit" value="Отправь себя в Мордер" style="background-color: lawngreen"/>
+    </form>
+</div>
+</body>
+</html>

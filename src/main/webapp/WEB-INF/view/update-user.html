@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update user</title>
+</head>
+
+<body style="background-color: aqua">
+
+<div align="center">
+    <h2 style="color: crimson">Стать кем то другим</h2>
+
+    <form th:method="PATCH" th:action="@{/users/edit/{id}(id=${user.getId()})}" th:object="${user}">
+        <label for="name" style="color: crimson">И кем ты хочешь стать?: </label>
+        <input type="text" th:field="*{name}" id="name"/>
+        <br/>
+
+        <label for="lastName" style="color: crimson">Какой престол выбираешь?: </label>
+        <input type="text" th:field="*{lastName}" id="lastName"/>
+        <br/>
+
+        <label for="age" style="color: crimson">Сколько правителю годиков?: </label>
+        <input type="text" th:field="*{age}" id="age"/>
+        <br/>
+
+        <input type="submit" value="Submit the update"/>
+    </form>
+</div>
+
+</body>
+</html>
+
