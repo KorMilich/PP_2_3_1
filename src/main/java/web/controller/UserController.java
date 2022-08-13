@@ -15,48 +15,6 @@ import java.util.List;
 @Controller
 @RequestMapping("/users")
 public class UserController {
-//    @Autowired
-//    private UserService userService;
-//
-//    @RequestMapping("/")
-//    public String showAllUsers(Model model) {
-//
-//        List<User> allUsers = userService.getAllUser();
-//        model.addAttribute("allUsers", allUsers);
-//
-//        return "all-users";
-//    }
-//
-//    @RequestMapping("/addNewUser")
-//    public String addUser(Model model) {
-//
-//        User user = new User();
-//        model.addAttribute("user", user);
-//
-//        return "user-info";
-//    }
-//
-//    @RequestMapping("/saveUser")
-//    public String saveUser(@ModelAttribute("user") User user) {
-//        userService.saveUser(user);
-//
-//        return "redirect:/";
-//    }
-//
-//    @RequestMapping("/updateInfo")
-//    public String updateUser(@RequestParam("userId") long id, Model model) {
-//        User user = userService.getUser(id);
-//        model.addAttribute("user", user);
-//        return "user-info";
-//
-//    }
-//    @RequestMapping("/deleteUser")
-//    public String deleteUser(@RequestParam("userId") long id){
-//        userService.deleteUser(id);
-//
-//        return "redirect:/";
-//
-//    }
 
     private UserService userService;
 
